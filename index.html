@@ -7,14 +7,12 @@
 <meta name="description" content="Free laser cutter settings calculator for diode and CO2 machines. Enter your wattage, material, and thickness to get power %, speed, passes, kerf offset, and air assist settings instantly.">
 <meta name="keywords" content="laser cutter settings calculator, diode laser settings, CO2 laser settings, LightBurn settings, xTool settings, Sculpfun settings, laser power speed chart">
 <link rel="canonical" href="https://hobbyistlasercalc.com/">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+CiAgPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNiIgZmlsbD0iIzBkMGUwZiIvPgogIDxsaW5lIHgxPSIyIiB5MT0iMTYiIHgyPSIyMiIgeTI9IjE2IiBzdHJva2U9IiNmZjVjMWEiIHN0cm9rZS13aWR0aD0iMiIvPgogIDxjaXJjbGUgY3g9IjIyIiBjeT0iMTYiIHI9IjMiIGZpbGw9IiNmZjVjMWEiLz4KICA8Y2lyY2xlIGN4PSIyMiIgY3k9IjE2IiByPSI2IiBmaWxsPSIjZmY1YzFhIiBvcGFjaXR5PSIwLjIiLz4KPC9zdmc+">
+
 <!-- Open Graph -->
 <meta property="og:title" content="Laser Cutter Settings Calculator">
 <meta property="og:description" content="Dial-in settings for diode & CO2 lasers. Real tested data, not guesses.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://hobbyistlasercalc.com/hobbyist-og-image.svg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
@@ -780,24 +778,6 @@ select option { background: var(--bg3); }
 
 .faq-item.open .faq-a { display: block; }
 
-/* ─── AD SLOTS ─── */
-.ad-slot {
-  background: var(--bg2);
-  border: 1px dashed rgba(255,255,255,0.08);
-  border-radius: var(--radius);
-  padding: 20px;
-  text-align: center;
-  color: var(--text3);
-  font-size: 11px;
-  font-family: var(--mono);
-  margin: 20px 0;
-  min-height: 90px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  letter-spacing: 0.05em;
-}
-
 /* ─── FOOTER ─── */
 footer {
   background: var(--bg2);
@@ -1034,7 +1014,29 @@ footer a:hover { color: var(--laser2); }
   font-weight: 500;
 }
 
+/* ─── AD SLOTS ─── */
+.ad-slot {
+  margin: 0 0 2px;
+  background: var(--bg2);
+  border: 1px solid var(--line);
+  padding: 12px;
+  text-align: center;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ad-slot ins {
+  display: block;
+  width: 100%;
+}
+
 </style>
+
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7814690967688754" crossorigin="anonymous"></script>
+
 <body>
 
 <div class="laser-beam"></div>
@@ -1060,15 +1062,23 @@ footer a:hover { color: var(--laser2); }
 <!-- ─── CALCULATOR ─── -->
 <div class="container">
 
-  <!-- Ad Top -->
-  <div class="ad-slot">Advertisement <!-- AdSense ins tag goes here --></div>
-
   <!-- PERSISTENT DISCLAIMER BANNER -->
   <div class="disclaimer-banner">
     <div class="db-icon">⚠</div>
     <div class="db-text">
       <strong>Starting points only.</strong> All settings are community-sourced references and should be treated as a starting point — not plug-and-play values. Your actual results will vary based on lens focus quality, ambient temperature, material brand and batch, machine age and calibration, and table flatness. <strong>Always run a test cut on scrap before committing to your workpiece.</strong> Never leave a running laser unattended. The owner of this site takes no responsibility for damage to materials, equipment, or injury resulting from use of these settings.
     </div>
+  </div>
+
+  <!-- AD SLOT 1 — above calculator -->
+  <div class="ad-slot">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-7814690967688754"
+         data-ad-slot="auto"
+         data-ad-format="horizontal"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
   </div>
 
   <div class="main-grid">
@@ -1291,8 +1301,16 @@ footer a:hover { color: var(--laser2); }
 
   </div><!-- /main-grid -->
 
-  <!-- Ad Mid -->
-  <div class="ad-slot">Advertisement <!-- AdSense mid --></div>
+  <!-- AD SLOT 2 — between calculator and reference tables -->
+  <div class="ad-slot">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-7814690967688754"
+         data-ad-slot="auto"
+         data-ad-format="horizontal"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
 
   <!-- ─── REFERENCE TABLES ─── -->
   <div class="tabs-section">
@@ -1723,16 +1741,16 @@ footer a:hover { color: var(--laser2); }
 
 </div><!-- /container -->
 
-<!-- Ad Bottom -->
-<div class="container">
-  <div class="ad-slot">Advertisement <!-- AdSense bottom --></div>
-</div>
-
 <footer>
   <div class="container">
     <p>hobbyistlasercalc.com — Free laser cutter settings for makers</p>
     <p style="margin-top:6px">Settings based on real-world testing. Always run test cuts on scrap. Never leave a running laser unattended.</p>
-    <p style="margin-top:8px"><a href="/about.html">About</a> · <a href="#">Submit Your Settings</a> · <a href="/privacy.html">Privacy Policy</a></p>
+    <p style="margin-top:8px">
+      <a href="https://github.com/SMSNYDER81/hobbyistlasercalc.com" target="_blank" rel="noopener">GitHub</a>
+      · <a href="https://github.com/SMSNYDER81/hobbyistlasercalc.com/issues/new?title=Settings+Submission&body=**Machine:**%0A**Material:**%0A**Thickness:**%0A**Power:**%0A**Speed:**%0A**Passes:**%0A**Air+Assist:**%0A**Notes:**" target="_blank" rel="noopener">Submit Your Settings</a>
+      · <a href="https://github.com/SMSNYDER81/hobbyistlasercalc.com/issues" target="_blank" rel="noopener">Report an Issue</a>
+    </p>
+    <p style="margin-top:8px; font-size:10px; color:var(--text3)">Built by a hobbyist, for hobbyists · <a href="https://github.com/SMSNYDER81/hobbyistlasercalc.com/blob/main/LICENSE" target="_blank" rel="noopener">MIT License</a></p>
   </div>
 </footer>
 
@@ -2421,6 +2439,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 </script>
-<script src="/feedback.js" data-repo="SMSNYDER81/hobbyistlasercalc.com"></script>
+
 </body>
 </html>
