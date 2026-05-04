@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/26907010/README.md)
 # Laser Cutter Settings Calculator
 
 A free, single-page web tool that gives hobbyist laser cutter users instant starting-point settings for diode and CO₂ machines — no login, no ads, no fluff.

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sculpfun S30 Settings Guide — Cutting and Engraving (2026)</title>
+<meta name="description" content="Tested power and speed settings for the Sculpfun S30 Ultra. Wood, acrylic, leather and more — starting points you can trust for your S30 diode laser.">
+<link rel="canonical" href="https://hobbyistlasercalc.com/sculpfun-s30-settings-guide.html">
+<meta property="og:title" content="Sculpfun S30 Settings Guide — Cutting and Engraving">
+<meta property="og:description" content="Tested settings for the Sculpfun S30 Ultra across common hobbyist materials.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://hobbyistlasercalc.com/hobbyist-og-image.svg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+CiAgPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNiIgZmlsbD0iIzBkMGUwZiIvPgogIDxsaW5lIHgxPSIyIiB5MT0iMTYiIHgyPSIyMiIgeTI9IjE2IiBzdHJva2U9IiNmZjVjMWEiIHN0cm9rZS13aWR0aD0iMiIvPgogIDxjaXJjbGUgY3g9IjIyIiBjeT0iMTYiIHI9IjMiIGZpbGw9IiNmZjVjMWEiLz4KICA8Y2lyY2xlIGN4PSIyMiIgY3k9IjE2IiByPSI2IiBmaWxsPSIjZmY1YzFhIiBvcGFjaXR5PSIwLjIiLz4KPC9zdmc+">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7814690967688754" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Sculpfun S30 Settings Guide — Cutting and Engraving","description":"Tested settings for the Sculpfun S30 Ultra across common hobbyist materials.","author":{"@type":"Organization","name":"Hobbyist Laser Calc"},"publisher":{"@type":"Organization","name":"Hobbyist Laser Calc","url":"https://hobbyistlasercalc.com"},"datePublished":"2026-05-01","dateModified":"2026-05-01"}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0d0e0f;--bg2:#141618;--bg3:#1c1f22;--bg4:#252a2e;--line:rgba(255,255,255,0.07);--line2:rgba(255,255,255,0.12);--text:#e8e4dc;--text2:#9a9590;--text3:#5a5650;--laser:#ff5c1a;--laser2:#ff8c4a;--laser-dim:rgba(255,92,26,0.12);--cyan:#3dd9c4;--gold:#e8c84a;--syne:'Syne',sans-serif;--mono:'IBM Plex Mono',monospace;--serif:'Instrument Serif',serif;--radius:8px}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--mono);font-size:13px;line-height:1.7;min-height:100vh}
+nav{position:sticky;top:0;z-index:100;background:rgba(13,14,15,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:52px}
+.nav-logo{font-family:var(--syne);font-weight:800;font-size:14px;color:var(--laser);text-decoration:none;letter-spacing:-0.3px}
+.nav-links{display:flex;gap:24px}
+.nav-links a{color:var(--text2);text-decoration:none;font-size:12px;transition:color 0.2s}
+.nav-links a:hover{color:var(--laser)}
+.page{max-width:760px;margin:0 auto;padding:60px 32px 120px}
+.page-label{font-family:var(--mono);font-size:11px;color:var(--laser);letter-spacing:2px;text-transform:uppercase;margin-bottom:16px}
+h1{font-family:var(--syne);font-weight:800;font-size:clamp(24px,4vw,38px);line-height:1.15;margin-bottom:12px}
+h2{font-family:var(--syne);font-weight:700;font-size:18px;color:var(--laser2);margin:2.5rem 0 0.75rem}
+h3{font-family:var(--syne);font-weight:700;font-size:14px;color:var(--cyan);margin:1.5rem 0 0.5rem}
+p{color:var(--text2);margin-bottom:1.2rem;line-height:1.8;font-family:var(--serif);font-size:15px}
+ul,ol{color:var(--text2);margin:0 0 1.2rem 1.5rem;font-family:var(--serif);font-size:15px}
+li{margin-bottom:0.5rem;line-height:1.7}
+.meta{display:flex;gap:1rem;color:var(--text3);font-size:11px;font-family:var(--mono);margin-bottom:2rem;flex-wrap:wrap}
+.divider{width:48px;height:2px;background:var(--laser);margin:16px 0 32px}
+.lead{font-size:15px;color:var(--text);font-family:var(--serif);margin-bottom:2rem;line-height:1.8;border-left:3px solid var(--laser);padding-left:1rem}
+.toc{background:var(--bg2);border:1px solid var(--line2);border-radius:var(--radius);padding:1.5rem;margin-bottom:2.5rem}
+.toc h4{font-size:11px;font-family:var(--mono);color:var(--text3);margin-bottom:0.75rem;text-transform:uppercase;letter-spacing:1.5px}
+.toc ol{margin:0 0 0 1.2rem}
+.toc li{margin-bottom:0.3rem;font-size:12px}
+.toc a{color:var(--laser2);text-decoration:none}
+.toc a:hover{text-decoration:underline}
+.settings-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:12px}
+.settings-table th{background:var(--bg3);color:var(--text);padding:8px 12px;text-align:left;border-bottom:1px solid var(--line2);font-family:var(--mono);font-size:11px;letter-spacing:0.5px}
+.settings-table td{padding:8px 12px;border-bottom:1px solid var(--line);color:var(--text2);font-family:var(--mono)}
+.settings-table tr:hover td{background:var(--bg2)}
+.settings-table .val{color:var(--laser2);font-weight:500}
+.cta-box{background:var(--laser-dim);border:1px solid rgba(255,92,26,0.3);border-radius:var(--radius);padding:1.5rem 2rem;margin:2.5rem 0;text-align:center}
+.cta-box p{color:var(--text);margin-bottom:1rem;font-family:var(--syne);font-weight:700;font-size:14px}
+.cta-btn{display:inline-block;background:var(--laser);color:#fff;padding:0.7rem 1.8rem;border-radius:6px;text-decoration:none;font-weight:700;font-size:13px;font-family:var(--syne);transition:opacity 0.2s}
+.cta-btn:hover{opacity:0.85}
+.info-box{background:var(--bg3);border:1px solid var(--line2);border-radius:var(--radius);padding:1.2rem 1.5rem;margin:1.5rem 0}
+.info-box strong{color:var(--gold)}
+.warning-box{background:rgba(232,200,74,0.08);border:1px solid rgba(232,200,74,0.25);border-radius:var(--radius);padding:1.2rem 1.5rem;margin:1.5rem 0}
+.warning-box strong{color:var(--gold)}
+.ad-slot{margin:2rem 0;min-height:90px;text-align:center}
+footer{border-top:1px solid var(--line);padding:24px 32px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-copy{color:var(--text3);font-size:11px}
+.footer-links{display:flex;gap:20px}
+.footer-links a{color:var(--text3);text-decoration:none;font-size:11px;transition:color 0.2s}
+.footer-links a:hover{color:var(--laser)}
+.related{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:1.5rem;margin-top:3rem}
+.related h4{font-size:11px;font-family:var(--mono);color:var(--text3);margin-bottom:1rem;text-transform:uppercase;letter-spacing:1.5px}
+.related-links{display:flex;flex-direction:column;gap:0.5rem}
+.related-links a{color:var(--laser2);text-decoration:none;font-size:13px;font-family:var(--serif)}
+.related-links a:hover{text-decoration:underline}
+@media(max-width:640px){.page{padding:40px 20px 80px}nav{padding:0 20px}footer{padding:20px;flex-direction:column;align-items:flex-start}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-logo">Hobbyist Laser Calc</a>
+  <div class="nav-links">
+    <a href="/">Calculator</a>
+    <a href="blog.html">Blog</a>
+    <a href="about.html">About</a>
+    <a href="privacy.html">Privacy</a>
+  </div>
+</nav>
+
+<div class="page">
+  <div class="page-label">Machine Guide</div>
+  <div class="meta"><span>📅 May 2026</span><span>⏱ 6 min read</span><span>🏷 Sculpfun S30</span></div>
+  <h1>Sculpfun S30 Settings Guide</h1>
+  <div class="divider"></div>
+
+  <p class="lead">The Sculpfun S30 Ultra is a capable diode laser that punches above its price point. This guide covers tested starting settings for the most common materials so you can skip the guesswork and start making things.</p>
+
+  <div class="toc">
+    <h4>Table of Contents</h4>
+    <ol>
+      <li><a href="#about">About the Sculpfun S30</a></li>
+      <li><a href="#wood">Wood Settings</a></li>
+      <li><a href="#acrylic">Acrylic Settings</a></li>
+      <li><a href="#leather">Leather Settings</a></li>
+      <li><a href="#tips">Pro Tips</a></li>
+    </ol>
+  </div>
+
+  <div class="ad-slot">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7814690967688754" data-ad-slot="auto" data-ad-format="horizontal" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <h2 id="about">About the Sculpfun S30</h2>
+  <p>The Sculpfun S30 Ultra comes in 10W and 20W variants. It features a fixed focus design with a compressed spot size that gives it good engraving detail. The open frame design makes it easy to work with large pieces but means it must be used in a well-ventilated area or inside an enclosure.</p>
+  <p>These settings are tested on the S30 Ultra 10W. For the 20W, reduce power by approximately 20% as a starting point and adjust from there.</p>
+
+  <div class="warning-box">
+    <strong>⚠ Start with scrap material.</strong> Use these as starting points and always test before running your final piece. Slight variations in material density and ambient humidity affect results.
+  </div>
+
+  <h2 id="wood">Wood Settings</h2>
+  <p>The S30 performs well on most wood types. The compressed spot size gives sharp engraving results. For cutting, run multiple passes at moderate power rather than one slow high-power pass — it gives cleaner edges and reduces char.</p>
+
+  <table class="settings-table">
+    <thead>
+      <tr><th>Material</th><th>Thickness</th><th>Mode</th><th>Power (10W)</th><th>Speed (mm/min)</th><th>Passes</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Basswood</td><td>3mm</td><td>Cut</td><td class="val">80%</td><td class="val">350</td><td class="val">2</td></tr>
+      <tr><td>Basswood</td><td>3mm</td><td>Engrave</td><td class="val">35%</td><td class="val">3500</td><td class="val">1</td></tr>
+      <tr><td>Plywood (birch)</td><td>3mm</td><td>Cut</td><td class="val">88%</td><td class="val">280</td><td class="val">2–3</td></tr>
+      <tr><td>Plywood (birch)</td><td>6mm</td><td>Cut</td><td class="val">95%</td><td class="val">160</td><td class="val">4</td></tr>
+      <tr><td>MDF</td><td>3mm</td><td>Cut</td><td class="val">90%</td><td class="val">220</td><td class="val">3</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="acrylic">Acrylic Settings</h2>
+  <p>Cast acrylic cuts well on the S30. Use air assist and run at moderate speeds. The S30's compressed spot helps produce cleaner edges in acrylic than wider spot machines. Colored acrylic generally requires slightly less power than clear.</p>
+
+  <table class="settings-table">
+    <thead>
+      <tr><th>Material</th><th>Thickness</th><th>Mode</th><th>Power (10W)</th><th>Speed (mm/min)</th><th>Passes</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Cast acrylic (clear)</td><td>2mm</td><td>Cut</td><td class="val">78%</td><td class="val">220</td><td class="val">2</td></tr>
+      <tr><td>Cast acrylic (clear)</td><td>3mm</td><td>Cut</td><td class="val">88%</td><td class="val">160</td><td class="val">3</td></tr>
+      <tr><td>Cast acrylic</td><td>3mm</td><td>Engrave</td><td class="val">28%</td><td class="val">4500</td><td class="val">1</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="leather">Leather Settings</h2>
+  <p>Genuine leather engraves exceptionally well on the S30 — the compressed spot produces fine detail. For cutting, multiple light passes give cleaner results than one heavy pass.</p>
+
+  <table class="settings-table">
+    <thead>
+      <tr><th>Material</th><th>Thickness</th><th>Mode</th><th>Power (10W)</th><th>Speed (mm/min)</th><th>Passes</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Genuine leather</td><td>2mm</td><td>Engrave</td><td class="val">30%</td><td class="val">3500</td><td class="val">1</td></tr>
+      <tr><td>Genuine leather</td><td>2mm</td><td>Cut</td><td class="val">70%</td><td class="val">350</td><td class="val">2</td></tr>
+      <tr><td>Faux leather (PU)</td><td>1mm</td><td>Engrave</td><td class="val">22%</td><td class="val">3500</td><td class="val">1</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="tips">Pro Tips for the S30</h2>
+  <p>The S30's fixed focus means you need to set material height precisely. Use the included spacer block and ensure your material is flat — any warping creates defocus that reduces cutting power. For warped materials, use honeycomb bed pins to hold them flat.</p>
+  <p>The S30 responds well to air assist. Even a simple setup improves cut quality significantly, especially on wood and acrylic. At minimum, position a small fan to blow across the cut area.</p>
+
+  <div class="cta-box">
+    <p>Get Sculpfun S30 settings automatically — enter your wattage, material, and thickness</p>
+    <a class="cta-btn" href="/">Open the Calculator →</a>
+  </div>
+
+  <div class="related">
+    <h4>Related Articles</h4>
+    <div class="related-links">
+      <a href="xtool-d1-pro-settings-guide.html">xTool D1 Pro Settings Guide</a>
+      <a href="laser-settings-wood.html">Laser Cutter Settings for Wood — Plywood, MDF & Hardwood</a>
+      <a href="laser-settings-acrylic.html">Laser Cutter Settings for Acrylic</a>
+      <a href="lightburn-settings-beginners.html">LightBurn Settings Guide for Beginners</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <span class="footer-copy">© 2026 Hobbyist Laser Calc</span>
+  <div class="footer-links">
+    <a href="/">Calculator</a>
+    <a href="blog.html">Blog</a>
+    <a href="about.html">About</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="https://github.com/SMSNYDER81/hobbyistlasercalc.com/issues" target="_blank" rel="noopener">Feedback</a>
+  </div>
+</footer>
+<script src="/feedback.js" data-repo="SMSNYDER81/hobbyistlasercalc.com"></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laser Cutter Settings Blog — Hobbyist Guides & Tutorials</title>
+<meta name="description" content="Practical laser cutter guides for hobbyists. Machine-specific settings, material guides, LightBurn tips, and cutting tutorials for diode and CO2 laser users.">
+<link rel="canonical" href="https://hobbyistlasercalc.com/blog.html">
+<meta property="og:title" content="Laser Cutter Settings Blog — Hobbyist Guides">
+<meta property="og:description" content="Practical laser cutter guides for hobbyists — machine settings, material guides, and tutorials.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://hobbyistlasercalc.com/hobbyist-og-image.svg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+CiAgPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNiIgZmlsbD0iIzBkMGUwZiIvPgogIDxsaW5lIHgxPSIyIiB5MT0iMTYiIHgyPSIyMiIgeTI9IjE2IiBzdHJva2U9IiNmZjVjMWEiIHN0cm9rZS13aWR0aD0iMiIvPgogIDxjaXJjbGUgY3g9IjIyIiBjeT0iMTYiIHI9IjMiIGZpbGw9IiNmZjVjMWEiLz4KICA8Y2lyY2xlIGN4PSIyMiIgY3k9IjE2IiByPSI2IiBmaWxsPSIjZmY1YzFhIiBvcGFjaXR5PSIwLjIiLz4KPC9zdmc+">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7814690967688754" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0d0e0f;--bg2:#141618;--bg3:#1c1f22;--bg4:#252a2e;
+  --line:rgba(255,255,255,0.07);--line2:rgba(255,255,255,0.12);
+  --text:#e8e4dc;--text2:#9a9590;--text3:#5a5650;
+  --laser:#ff5c1a;--laser2:#ff8c4a;--laser-dim:rgba(255,92,26,0.12);
+  --cyan:#3dd9c4;--gold:#e8c84a;
+  --syne:'Syne',sans-serif;--mono:'IBM Plex Mono',monospace;--serif:'Instrument Serif',serif;
+  --radius:8px;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--mono);font-size:13px;line-height:1.7;min-height:100vh}
+nav{position:sticky;top:0;z-index:100;background:rgba(13,14,15,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:52px}
+.nav-logo{font-family:var(--syne);font-weight:800;font-size:14px;color:var(--laser);text-decoration:none;letter-spacing:-0.3px}
+.nav-links{display:flex;gap:24px}
+.nav-links a{color:var(--text2);text-decoration:none;font-size:12px;transition:color 0.2s}
+.nav-links a:hover,.nav-links a.active{color:var(--laser)}
+.page{max-width:1000px;margin:0 auto;padding:60px 32px 120px}
+.blog-header{margin-bottom:48px}
+.page-label{font-family:var(--mono);font-size:11px;color:var(--laser);letter-spacing:2px;text-transform:uppercase;margin-bottom:16px}
+h1{font-family:var(--syne);font-weight:800;font-size:clamp(28px,5vw,42px);line-height:1.1;margin-bottom:16px}
+.blog-header p{color:var(--text2);font-size:13px;line-height:1.7}
+.divider{width:48px;height:2px;background:var(--laser);margin:24px 0 40px}
+.blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+.blog-card{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:24px;text-decoration:none;display:flex;flex-direction:column;gap:12px;transition:border-color 0.2s,transform 0.2s}
+.blog-card:hover{border-color:var(--laser);transform:translateY(-2px)}
+.card-tag{font-size:10px;font-family:var(--mono);color:var(--laser);text-transform:uppercase;letter-spacing:1.5px}
+.blog-card h2{font-family:var(--syne);font-size:15px;font-weight:700;color:var(--text);line-height:1.4}
+.blog-card p{font-size:12px;color:var(--text2);line-height:1.65;margin:0}
+.card-meta{font-size:10px;font-family:var(--mono);color:var(--text3);margin-top:auto}
+.ad-slot{margin:2rem 0;min-height:90px;text-align:center}
+footer{border-top:1px solid var(--line);padding:24px 32px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-copy{color:var(--text3);font-size:11px}
+.footer-links{display:flex;gap:20px}
+.footer-links a{color:var(--text3);text-decoration:none;font-size:11px;transition:color 0.2s}
+.footer-links a:hover{color:var(--laser)}
+@media(max-width:640px){.page{padding:40px 20px 80px}nav{padding:0 20px}footer{padding:20px;flex-direction:column;align-items:flex-start}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-logo">Hobbyist Laser Calc</a>
+  <div class="nav-links">
+    <a href="/">Calculator</a>
+    <a href="blog.html" class="active">Blog</a>
+    <a href="about.html">About</a>
+    <a href="privacy.html">Privacy</a>
+  </div>
+</nav>
+
+<div class="page">
+  <div class="blog-header">
+    <div class="page-label">Blog</div>
+    <h1>Laser Cutter Guides & Settings</h1>
+    <div class="divider"></div>
+    <p>Practical guides for hobbyist laser users — machine-specific settings, material guides, and tips for getting better results from your diode or CO2 laser.</p>
+  </div>
+
+  <div class="ad-slot">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7814690967688754" data-ad-slot="auto" data-ad-format="horizontal" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <div class="blog-grid">
+
+    <a class="blog-card" href="xtool-d1-pro-settings-guide.html">
+      <span class="card-tag">Machine Guide</span>
+      <h2>xTool D1 Pro Settings Guide — Power, Speed & Materials</h2>
+      <p>Complete settings reference for the xTool D1 Pro 10W and 20W. Wood, acrylic, leather, and more with tested starting points.</p>
+      <span class="card-meta">May 2026 · 7 min read</span>
+    </a>
+
+    <a class="blog-card" href="sculpfun-s30-settings-guide.html">
+      <span class="card-tag">Machine Guide</span>
+      <h2>Sculpfun S30 Settings Guide for Cutting and Engraving</h2>
+      <p>Dialed-in settings for the Sculpfun S30 Ultra across common hobbyist materials. Starting points you can trust.</p>
+      <span class="card-meta">May 2026 · 6 min read</span>
+    </a>
+
+    <a class="blog-card" href="laser-settings-acrylic.html">
+      <span class="card-tag">Material Guide</span>
+      <h2>Laser Cutter Settings for Acrylic — Diode & CO2</h2>
+      <p>How to cut and engrave acrylic cleanly without melting, cracking, or flaming. Settings for diode and CO2 machines.</p>
+      <span class="card-meta">May 2026 · 6 min read</span>
+    </a>
+
+    <a class="blog-card" href="laser-settings-wood.html">
+      <span class="card-tag">Material Guide</span>
+      <h2>Laser Cutter Settings for Wood — Plywood, MDF & Hardwood</h2>
+      <p>Power and speed settings for cutting and engraving the most common wood types on hobbyist diode and CO2 lasers.</p>
+      <span class="card-meta">May 2026 · 7 min read</span>
+    </a>
+
+    <a class="blog-card" href="laser-settings-leather.html">
+      <span class="card-tag">Material Guide</span>
+      <h2>Laser Engraving and Cutting Leather — Settings Guide</h2>
+      <p>Get clean cuts and sharp engravings on genuine and faux leather. Includes settings for diode lasers and CO2 machines.</p>
+      <span class="card-meta">May 2026 · 5 min read</span>
+    </a>
+
+    <a class="blog-card" href="what-is-kerf-offset-laser.html">
+      <span class="card-tag">Concepts</span>
+      <h2>What Is Kerf Offset in Laser Cutting? (And Why It Matters)</h2>
+      <p>Kerf offset explained — what it is, how to measure it, and how to apply it in LightBurn for precise fitting parts.</p>
+      <span class="card-meta">May 2026 · 5 min read</span>
+    </a>
+
+    <a class="blog-card" href="lightburn-settings-beginners.html">
+      <span class="card-tag">Software</span>
+      <h2>LightBurn Settings Guide for Beginners</h2>
+      <p>The essential LightBurn settings every new user needs to understand — speed, power, passes, cut vs fill, and more.</p>
+      <span class="card-meta">May 2026 · 8 min read</span>
+    </a>
+
+    <a class="blog-card" href="diode-vs-co2-laser-comparison.html">
+      <span class="card-tag">Buying Guide</span>
+      <h2>Diode vs CO2 Laser Cutter — Which Should You Buy?</h2>
+      <p>The honest comparison for hobbyists — what each type can cut, what each costs, and which one makes sense for your projects.</p>
+      <span class="card-meta">May 2026 · 7 min read</span>
+    </a>
+
+  </div>
+</div>
+
+<footer>
+  <span class="footer-copy">© 2026 Hobbyist Laser Calc</span>
+  <div class="footer-links">
+    <a href="/">Calculator</a>
+    <a href="blog.html">Blog</a>
+    <a href="about.html">About</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="https://github.com/SMSNYDER81/hobbyistlasercalc.com/issues" target="_blank" rel="noopener">Feedback</a>
+  </div>
+</footer>
+<script src="/feedback.js" data-repo="SMSNYDER81/hobbyistlasercalc.com"></script>
+</body>
+</html>

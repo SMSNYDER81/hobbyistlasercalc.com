@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LightBurn Settings Guide for Beginners (2026)</title>
+<meta name="description" content="The essential LightBurn settings every new user needs to understand — speed, power, passes, cut vs fill, interval, and more. A practical beginner's guide.">
+<link rel="canonical" href="https://hobbyistlasercalc.com/lightburn-settings-beginners.html">
+<meta property="og:title" content="LightBurn Settings Guide for Beginners">
+<meta property="og:description" content="Essential LightBurn settings explained for new users — speed, power, passes, cut vs fill, and more.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://hobbyistlasercalc.com/hobbyist-og-image.svg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+CiAgPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNiIgZmlsbD0iIzBkMGUwZiIvPgogIDxsaW5lIHgxPSIyIiB5MT0iMTYiIHgyPSIyMiIgeTI9IjE2IiBzdHJva2U9IiNmZjVjMWEiIHN0cm9rZS13aWR0aD0iMiIvPgogIDxjaXJjbGUgY3g9IjIyIiBjeT0iMTYiIHI9IjMiIGZpbGw9IiNmZjVjMWEiLz4KICA8Y2lyY2xlIGN4PSIyMiIgY3k9IjE2IiByPSI2IiBmaWxsPSIjZmY1YzFhIiBvcGFjaXR5PSIwLjIiLz4KPC9zdmc+">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7814690967688754" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"LightBurn Settings Guide for Beginners","description":"Essential LightBurn settings explained for new users.","author":{"@type":"Organization","name":"Hobbyist Laser Calc"},"publisher":{"@type":"Organization","name":"Hobbyist Laser Calc","url":"https://hobbyistlasercalc.com"},"datePublished":"2026-05-01","dateModified":"2026-05-01"}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0d0e0f;--bg2:#141618;--bg3:#1c1f22;--bg4:#252a2e;--line:rgba(255,255,255,0.07);--line2:rgba(255,255,255,0.12);--text:#e8e4dc;--text2:#9a9590;--text3:#5a5650;--laser:#ff5c1a;--laser2:#ff8c4a;--laser-dim:rgba(255,92,26,0.12);--cyan:#3dd9c4;--gold:#e8c84a;--syne:'Syne',sans-serif;--mono:'IBM Plex Mono',monospace;--serif:'Instrument Serif',serif;--radius:8px}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--mono);font-size:13px;line-height:1.7;min-height:100vh}
+nav{position:sticky;top:0;z-index:100;background:rgba(13,14,15,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:52px}
+.nav-logo{font-family:var(--syne);font-weight:800;font-size:14px;color:var(--laser);text-decoration:none;letter-spacing:-0.3px}
+.nav-links{display:flex;gap:24px}
+.nav-links a{color:var(--text2);text-decoration:none;font-size:12px;transition:color 0.2s}
+.nav-links a:hover{color:var(--laser)}
+.page{max-width:760px;margin:0 auto;padding:60px 32px 120px}
+.page-label{font-family:var(--mono);font-size:11px;color:var(--laser);letter-spacing:2px;text-transform:uppercase;margin-bottom:16px}
+h1{font-family:var(--syne);font-weight:800;font-size:clamp(24px,4vw,38px);line-height:1.15;margin-bottom:12px}
+h2{font-family:var(--syne);font-weight:700;font-size:18px;color:var(--laser2);margin:2.5rem 0 0.75rem}
+h3{font-family:var(--syne);font-weight:700;font-size:14px;color:var(--cyan);margin:1.5rem 0 0.5rem}
+p{color:var(--text2);margin-bottom:1.2rem;line-height:1.8;font-family:var(--serif);font-size:15px}
+ul,ol{color:var(--text2);margin:0 0 1.2rem 1.5rem;font-family:var(--serif);font-size:15px}
+li{margin-bottom:0.5rem;line-height:1.7}
+.meta{display:flex;gap:1rem;color:var(--text3);font-size:11px;font-family:var(--mono);margin-bottom:2rem;flex-wrap:wrap}
+.divider{width:48px;height:2px;background:var(--laser);margin:16px 0 32px}
+.lead{font-size:15px;color:var(--text);font-family:var(--serif);margin-bottom:2rem;line-height:1.8;border-left:3px solid var(--laser);padding-left:1rem}
+.toc{background:var(--bg2);border:1px solid var(--line2);border-radius:var(--radius);padding:1.5rem;margin-bottom:2.5rem}
+.toc h4{font-size:11px;font-family:var(--mono);color:var(--text3);margin-bottom:0.75rem;text-transform:uppercase;letter-spacing:1.5px}
+.toc ol{margin:0 0 0 1.2rem}
+.toc li{margin-bottom:0.3rem;font-size:12px}
+.toc a{color:var(--laser2);text-decoration:none}
+.toc a:hover{text-decoration:underline}
+.settings-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:12px}
+.settings-table th{background:var(--bg3);color:var(--text);padding:8px 12px;text-align:left;border-bottom:1px solid var(--line2);font-family:var(--mono);font-size:11px;letter-spacing:0.5px}
+.settings-table td{padding:8px 12px;border-bottom:1px solid var(--line);color:var(--text2);font-family:var(--mono)}
+.settings-table tr:hover td{background:var(--bg2)}
+.settings-table .val{color:var(--laser2);font-weight:500}
+.cta-box{background:var(--laser-dim);border:1px solid rgba(255,92,26,0.3);border-radius:var(--radius);padding:1.5rem 2rem;margin:2.5rem 0;text-align:center}
+.cta-box p{color:var(--text);margin-bottom:1rem;font-family:var(--syne);font-weight:700;font-size:14px}
+.cta-btn{display:inline-block;background:var(--laser);color:#fff;padding:0.7rem 1.8rem;border-radius:6px;text-decoration:none;font-weight:700;font-size:13px;font-family:var(--syne);transition:opacity 0.2s}
+.cta-btn:hover{opacity:0.85}
+.info-box{background:var(--bg3);border:1px solid var(--line2);border-radius:var(--radius);padding:1.2rem 1.5rem;margin:1.5rem 0}
+.info-box strong{color:var(--gold)}
+.warning-box{background:rgba(232,200,74,0.08);border:1px solid rgba(232,200,74,0.25);border-radius:var(--radius);padding:1.2rem 1.5rem;margin:1.5rem 0}
+.warning-box strong{color:var(--gold)}
+.ad-slot{margin:2rem 0;min-height:90px;text-align:center}
+footer{border-top:1px solid var(--line);padding:24px 32px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-copy{color:var(--text3);font-size:11px}
+.footer-links{display:flex;gap:20px}
+.footer-links a{color:var(--text3);text-decoration:none;font-size:11px;transition:color 0.2s}
+.footer-links a:hover{color:var(--laser)}
+.related{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:1.5rem;margin-top:3rem}
+.related h4{font-size:11px;font-family:var(--mono);color:var(--text3);margin-bottom:1rem;text-transform:uppercase;letter-spacing:1.5px}
+.related-links{display:flex;flex-direction:column;gap:0.5rem}
+.related-links a{color:var(--laser2);text-decoration:none;font-size:13px;font-family:var(--serif)}
+.related-links a:hover{text-decoration:underline}
+@media(max-width:640px){.page{padding:40px 20px 80px}nav{padding:0 20px}footer{padding:20px;flex-direction:column;align-items:flex-start}}
+</style>
+
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-logo">Hobbyist Laser Calc</a>
+  <div class="nav-links">
+    <a href="/">Calculator</a>
+    <a href="blog.html">Blog</a>
+    <a href="about.html">About</a>
+    <a href="privacy.html">Privacy</a>
+  </div>
+</nav>
+<div class="page">
+  <div class="page-label">Software</div>
+  <div class="meta"><span>📅 May 2026</span><span>⏱ 8 min read</span><span>🏷 LightBurn</span></div>
+  <h1>LightBurn Settings Guide for Beginners</h1>
+  <div class="divider"></div>
+  <p class="lead">LightBurn is the most popular laser control software for hobbyists and it's worth learning properly. The interface looks complex at first but once you understand the core settings — speed, power, passes, and modes — everything else falls into place. Here's what you actually need to know to get started.</p>
+
+  <div class="toc">
+    <h4>Table of Contents</h4>
+    <ol>
+      <li><a href="#layers">Understanding Layers</a></li>
+      <li><a href="#speed-power">Speed and Power</a></li>
+      <li><a href="#passes">Passes and Z-Step</a></li>
+      <li><a href="#modes">Cut vs Fill Mode</a></li>
+      <li><a href="#interval">Line Interval for Engraving</a></li>
+      <li><a href="#material-test">Running a Material Test</a></li>
+    </ol>
+  </div>
+
+  <div class="ad-slot">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7814690967688754" data-ad-slot="auto" data-ad-format="horizontal" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <h2 id="layers">Understanding Layers</h2>
+  <p>LightBurn uses a color-coded layer system. Every shape in your design is assigned to a layer — identified by color in the Cuts/Layers panel on the right side of the screen. Each layer has its own settings: speed, power, mode, and number of passes. This lets you cut and engrave in the same job with different settings for each operation.</p>
+  <p>The order layers run is controlled by the priority number in the Cuts/Layers panel. Engrave operations (Fill mode) typically run before cut operations (Line mode) so the piece stays flat until it's fully cut. This is the most important layer ordering principle for beginners to understand.</p>
+
+  <h2 id="speed-power">Speed and Power</h2>
+  <p>Speed and power are the two primary controls you will adjust for every material and operation. Speed is measured in mm/min on most diode lasers and mm/s on CO2 machines. Power is expressed as a percentage of your machine's maximum output.</p>
+  <p>These two settings work in inverse relationship — higher speed requires more power to achieve the same result. Slower speed with lower power is generally better for engraving quality. Higher speed with higher power is used for cutting to minimize heat buildup in surrounding material.</p>
+  <p>LightBurn has a Min Power and Max Power setting. For cutting, set both to the same value. For engraving, the Min Power setting controls how the laser behaves when slowing down for direction changes — typically set Min Power to 10–20% below Max Power for engraving.</p>
+
+  <h2 id="passes">Passes and Z-Step</h2>
+  <p>Passes tells LightBurn how many times to repeat the operation. For cutting through thick material, multiple passes at moderate power produce cleaner results than one slow high-power pass. Each pass follows exactly the same path.</p>
+  <p>Z-Step (available on machines with motorized Z-axis) drops the focus slightly with each pass. This keeps the focus point at the bottom of the cut as the laser works through the material — useful for cutting material thicker than 6mm. For most hobbyist work without a motorized Z-axis, set Z-Step to zero.</p>
+
+  <h2 id="modes">Cut vs Fill Mode</h2>
+  <p>Line mode (Cut) traces the outline of your shape. It's used for cutting and for outline engraving. Fill mode engraves the interior of a shape by scanning back and forth — similar to how a printer works. Fill mode is used for area engraving, photos, and shading.</p>
+  <p>Fill+Line mode does both — fills the interior and then traces the outline. This is useful for engraved designs where you want a crisp defined edge after the fill.</p>
+
+  <h2 id="interval">Line Interval for Engraving</h2>
+  <p>Line interval (also called scan gap or line gap) controls how far apart the engraving scan lines are. A smaller interval means denser, smoother engraving at the cost of more time. A larger interval is faster but shows visible lines between passes.</p>
+  <p>For most wood engraving, 0.1mm interval produces good results. For detailed photo engraving, 0.07mm or 0.05mm gives finer results but significantly increases run time. For draft quality or large fills where detail is not critical, 0.15mm or 0.2mm is adequate.</p>
+
+  <h2 id="material-test">Running a Material Test</h2>
+  <p>LightBurn has a built-in Material Test generator under the Laser Tools menu. It creates a grid of squares with different power and speed combinations — essentially a power/speed matrix burned onto your material. This is the fastest way to dial in settings for a new material without manually testing each combination.</p>
+  <p>Set your power range (e.g., 30% to 90%), speed range (e.g., 1000–5000 mm/min), and grid size, then run it on a scrap piece. The resulting grid shows you exactly how your machine responds to different combinations on that specific material, letting you pick the settings that produce the result you want.</p>
+
+  <div class="cta-box">
+    <p>Get LightBurn-compatible settings for your material in seconds</p>
+    <a class="cta-btn" href="/">Open the Calculator →</a>
+  </div>
+
+  <div class="ad-slot">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7814690967688754" data-ad-slot="auto" data-ad-format="horizontal" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <div class="related">
+    <h4>Related Articles</h4>
+    <div class="related-links">
+      <a href="what-is-kerf-offset-laser.html">What Is Kerf Offset in Laser Cutting?</a>
+      <a href="xtool-d1-pro-settings-guide.html">xTool D1 Pro Settings Guide</a>
+      <a href="sculpfun-s30-settings-guide.html">Sculpfun S30 Settings Guide</a>
+      <a href="diode-vs-co2-laser-comparison.html">Diode vs CO2 Laser Cutter Comparison</a>
+    </div>
+  </div>
+</div>
+<footer>
+  <span class="footer-copy">© 2026 Hobbyist Laser Calc</span>
+  <div class="footer-links">
+    <a href="/">Calculator</a>
+    <a href="blog.html">Blog</a>
+    <a href="about.html">About</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="https://github.com/SMSNYDER81/hobbyistlasercalc.com/issues" target="_blank" rel="noopener">Feedback</a>
+  </div>
+</footer>
+<script src="/feedback.js" data-repo="SMSNYDER81/hobbyistlasercalc.com"></script>
+</body>
+</html>

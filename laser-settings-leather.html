@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laser Engraving and Cutting Leather — Settings Guide (2026)</title>
+<meta name="description" content="Get clean cuts and sharp engravings on genuine and faux leather. Settings for diode and CO2 lasers with safety notes on which leather types to avoid.">
+<link rel="canonical" href="https://hobbyistlasercalc.com/laser-settings-leather.html">
+<meta property="og:title" content="Laser Engraving and Cutting Leather — Settings Guide">
+<meta property="og:description" content="Get clean cuts and sharp engravings on genuine and faux leather. Settings for diode and CO2 lasers with safety notes on which leather types to avoid.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://hobbyistlasercalc.com/hobbyist-og-image.svg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+CiAgPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNiIgZmlsbD0iIzBkMGUwZiIvPgogIDxsaW5lIHgxPSIyIiB5MT0iMTYiIHgyPSIyMiIgeTI9IjE2IiBzdHJva2U9IiNmZjVjMWEiIHN0cm9rZS13aWR0aD0iMiIvPgogIDxjaXJjbGUgY3g9IjIyIiBjeT0iMTYiIHI9IjMiIGZpbGw9IiNmZjVjMWEiLz4KICA8Y2lyY2xlIGN4PSIyMiIgY3k9IjE2IiByPSI2IiBmaWxsPSIjZmY1YzFhIiBvcGFjaXR5PSIwLjIiLz4KPC9zdmc+">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7814690967688754" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Laser Engraving and Cutting Leather — Settings Guide","description":"Get clean cuts and sharp engravings on genuine and faux leather. Settings for diode and CO2 lasers with safety notes on which leather types to avoid.","author":{"@type":"Organization","name":"Hobbyist Laser Calc"},"publisher":{"@type":"Organization","name":"Hobbyist Laser Calc","url":"https://hobbyistlasercalc.com"},"datePublished":"2026-05-01","dateModified":"2026-05-01"}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0d0e0f;--bg2:#141618;--bg3:#1c1f22;--bg4:#252a2e;--line:rgba(255,255,255,0.07);--line2:rgba(255,255,255,0.12);--text:#e8e4dc;--text2:#9a9590;--text3:#5a5650;--laser:#ff5c1a;--laser2:#ff8c4a;--laser-dim:rgba(255,92,26,0.12);--cyan:#3dd9c4;--gold:#e8c84a;--syne:'Syne',sans-serif;--mono:'IBM Plex Mono',monospace;--serif:'Instrument Serif',serif;--radius:8px}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--mono);font-size:13px;line-height:1.7;min-height:100vh}
+nav{position:sticky;top:0;z-index:100;background:rgba(13,14,15,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:52px}
+.nav-logo{font-family:var(--syne);font-weight:800;font-size:14px;color:var(--laser);text-decoration:none;letter-spacing:-0.3px}
+.nav-links{display:flex;gap:24px}
+.nav-links a{color:var(--text2);text-decoration:none;font-size:12px;transition:color 0.2s}
+.nav-links a:hover{color:var(--laser)}
+.page{max-width:760px;margin:0 auto;padding:60px 32px 120px}
+.page-label{font-family:var(--mono);font-size:11px;color:var(--laser);letter-spacing:2px;text-transform:uppercase;margin-bottom:16px}
+h1{font-family:var(--syne);font-weight:800;font-size:clamp(24px,4vw,38px);line-height:1.15;margin-bottom:12px}
+h2{font-family:var(--syne);font-weight:700;font-size:18px;color:var(--laser2);margin:2.5rem 0 0.75rem}
+h3{font-family:var(--syne);font-weight:700;font-size:14px;color:var(--cyan);margin:1.5rem 0 0.5rem}
+p{color:var(--text2);margin-bottom:1.2rem;line-height:1.8;font-family:var(--serif);font-size:15px}
+ul,ol{color:var(--text2);margin:0 0 1.2rem 1.5rem;font-family:var(--serif);font-size:15px}
+li{margin-bottom:0.5rem;line-height:1.7}
+.meta{display:flex;gap:1rem;color:var(--text3);font-size:11px;font-family:var(--mono);margin-bottom:2rem;flex-wrap:wrap}
+.divider{width:48px;height:2px;background:var(--laser);margin:16px 0 32px}
+.lead{font-size:15px;color:var(--text);font-family:var(--serif);margin-bottom:2rem;line-height:1.8;border-left:3px solid var(--laser);padding-left:1rem}
+.toc{background:var(--bg2);border:1px solid var(--line2);border-radius:var(--radius);padding:1.5rem;margin-bottom:2.5rem}
+.toc h4{font-size:11px;font-family:var(--mono);color:var(--text3);margin-bottom:0.75rem;text-transform:uppercase;letter-spacing:1.5px}
+.toc ol{margin:0 0 0 1.2rem}
+.toc li{margin-bottom:0.3rem;font-size:12px}
+.toc a{color:var(--laser2);text-decoration:none}
+.toc a:hover{text-decoration:underline}
+.settings-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:12px}
+.settings-table th{background:var(--bg3);color:var(--text);padding:8px 12px;text-align:left;border-bottom:1px solid var(--line2);font-family:var(--mono);font-size:11px;letter-spacing:0.5px}
+.settings-table td{padding:8px 12px;border-bottom:1px solid var(--line);color:var(--text2);font-family:var(--mono)}
+.settings-table tr:hover td{background:var(--bg2)}
+.settings-table .val{color:var(--laser2);font-weight:500}
+.cta-box{background:var(--laser-dim);border:1px solid rgba(255,92,26,0.3);border-radius:var(--radius);padding:1.5rem 2rem;margin:2.5rem 0;text-align:center}
+.cta-box p{color:var(--text);margin-bottom:1rem;font-family:var(--syne);font-weight:700;font-size:14px}
+.cta-btn{display:inline-block;background:var(--laser);color:#fff;padding:0.7rem 1.8rem;border-radius:6px;text-decoration:none;font-weight:700;font-size:13px;font-family:var(--syne);transition:opacity 0.2s}
+.cta-btn:hover{opacity:0.85}
+.info-box{background:var(--bg3);border:1px solid var(--line2);border-radius:var(--radius);padding:1.2rem 1.5rem;margin:1.5rem 0}
+.info-box strong{color:var(--gold)}
+.warning-box{background:rgba(232,200,74,0.08);border:1px solid rgba(232,200,74,0.25);border-radius:var(--radius);padding:1.2rem 1.5rem;margin:1.5rem 0}
+.warning-box strong{color:var(--gold)}
+.ad-slot{margin:2rem 0;min-height:90px;text-align:center}
+footer{border-top:1px solid var(--line);padding:24px 32px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-copy{color:var(--text3);font-size:11px}
+.footer-links{display:flex;gap:20px}
+.footer-links a{color:var(--text3);text-decoration:none;font-size:11px;transition:color 0.2s}
+.footer-links a:hover{color:var(--laser)}
+.related{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:1.5rem;margin-top:3rem}
+.related h4{font-size:11px;font-family:var(--mono);color:var(--text3);margin-bottom:1rem;text-transform:uppercase;letter-spacing:1.5px}
+.related-links{display:flex;flex-direction:column;gap:0.5rem}
+.related-links a{color:var(--laser2);text-decoration:none;font-size:13px;font-family:var(--serif)}
+.related-links a:hover{text-decoration:underline}
+@media(max-width:640px){.page{padding:40px 20px 80px}nav{padding:0 20px}footer{padding:20px;flex-direction:column;align-items:flex-start}}
+</style>
+
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-logo">Hobbyist Laser Calc</a>
+  <div class="nav-links">
+    <a href="/">Calculator</a>
+    <a href="blog.html">Blog</a>
+    <a href="about.html">About</a>
+    <a href="privacy.html">Privacy</a>
+  </div>
+</nav>
+
+<div class="page">
+  <div class="page-label">Material Guide</div>
+  <div class="meta"><span>📅 May 2026</span><span>⏱ 5 min read</span><span>🏷 Leather</span></div>
+  <h1>Laser Settings for Leather</h1>
+  <div class="divider"></div>
+
+  <p class="lead">Leather is one of the most rewarding materials to work with on a laser cutter. Custom wallets, belts, keychains, and accessories with laser-engraved personalization sell well and are genuinely satisfying to make. Here's how to get great results safely.</p>
+
+  <div class="toc">
+    <h4>Table of Contents</h4>
+    <ol>
+      <li><a href="#leather-types">Which Leather Is Safe to Laser?</a></li>
+      <li><a href="#diode-settings">Diode Laser Settings</a></li>
+      <li><a href="#co2-settings">CO2 Laser Settings</a></li>
+      <li><a href="#tips">Tips for Best Results</a></li>
+    </ol>
+  </div>
+
+  <div class="ad-slot">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7814690967688754" data-ad-slot="auto" data-ad-format="horizontal" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+
+  <h2 id="leather-types">Which Leather Is Safe to Laser?</h2>
+  <p>This is the most important thing to get right before you start. Most genuine leather and PU (polyurethane) faux leather are safe to laser cut and engrave. PVC-based synthetic leather is not — it releases chlorine gas when burned, which is toxic and corrosive to your machine.</p>
+
+  <div class="warning-box">
+    <strong>⚠ Never laser cut PVC leather.</strong> PVC (vinyl) releases hydrochloric acid gas when burned. It will damage your lungs, your machine, and potentially corrode metal components. Test unknown materials with a flame test: genuine leather and PU leather char, PVC melts and smells chemical. If in doubt, don't cut it.
+  </div>
+
+  <p>Genuine vegetable-tanned leather produces the best engraving results — deep, dark, high-contrast marks. Chrome-tanned leather also works well. Suede and nubuck engrave but the results are less defined. Always source from a known supplier and confirm the material is PVC-free.</p>
+
+  <h2 id="diode-settings">Diode Laser Settings for Leather</h2>
+  <p>Leather responds well to diode lasers. The material absorbs the 450nm wavelength effectively, and the results are consistently good across diode power levels. Engraving is the strongest use case — cutting requires multiple passes but produces clean results.</p>
+
+  <table class="settings-table">
+    <thead>
+      <tr><th>Material</th><th>Thickness</th><th>Mode</th><th>Power (10W)</th><th>Speed (mm/min)</th><th>Passes</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Genuine leather (veg tan)</td><td>2mm</td><td>Engrave</td><td class="val">30%</td><td class="val">3000</td><td class="val">1</td></tr>
+      <tr><td>Genuine leather (veg tan)</td><td>2mm</td><td>Cut</td><td class="val">72%</td><td class="val">300</td><td class="val">2</td></tr>
+      <tr><td>Genuine leather (chrome tan)</td><td>2mm</td><td>Engrave</td><td class="val">35%</td><td class="val">3000</td><td class="val">1</td></tr>
+      <tr><td>Faux leather (PU)</td><td>1mm</td><td>Engrave</td><td class="val">22%</td><td class="val">3500</td><td class="val">1</td></tr>
+      <tr><td>Faux leather (PU)</td><td>1mm</td><td>Cut</td><td class="val">60%</td><td class="val">400</td><td class="val">1–2</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="co2-settings">CO2 Laser Settings for Leather</h2>
+  <p>CO2 lasers produce outstanding results on leather. The 10.6 micron wavelength is absorbed very efficiently, allowing faster engraving speeds and cleaner cuts with less heat buildup in surrounding material.</p>
+
+  <table class="settings-table">
+    <thead>
+      <tr><th>Material</th><th>Thickness</th><th>Mode</th><th>Power (40W CO2)</th><th>Speed (mm/s)</th><th>Passes</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Genuine leather</td><td>2mm</td><td>Engrave</td><td class="val">20%</td><td class="val">300</td><td class="val">1</td></tr>
+      <tr><td>Genuine leather</td><td>2mm</td><td>Cut</td><td class="val">40%</td><td class="val">20</td><td class="val">1</td></tr>
+      <tr><td>Genuine leather</td><td>4mm</td><td>Cut</td><td class="val">55%</td><td class="val">12</td><td class="val">1–2</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="tips">Tips for Best Results</h2>
+  <p>Leather tends to curl when cut, especially thinner pieces. Pin it down flat on your work bed before cutting. A honeycomb bed with hold-down pins works well, or use double-sided tape for smaller pieces.</p>
+  <p>For engraving, dampening the leather slightly before engraving can deepen the mark and reduce burning on the surface. This technique works best on vegetable-tanned leather.</p>
+  <p>Always ventilate well when cutting leather. The smell is not toxic at typical hobbyist volumes but it is pungent and will linger. An activated carbon filter significantly reduces the odor.</p>
+
+
+  <div class="cta-box">
+    <p>Get instant laser settings for any material and machine</p>
+    <a class="cta-btn" href="/">Open the Calculator →</a>
+  </div>
+
+  <div class="ad-slot">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7814690967688754" data-ad-slot="auto" data-ad-format="horizontal" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <div class="related">
+    <h4>Related Articles</h4>
+    <div class="related-links">
+      <a href="laser-settings-wood.html">Laser Cutter Settings for Wood</a>
+      <a href="laser-settings-acrylic.html">Laser Cutter Settings for Acrylic</a>
+      <a href="xtool-d1-pro-settings-guide.html">xTool D1 Pro Settings Guide</a>
+      <a href="sculpfun-s30-settings-guide.html">Sculpfun S30 Settings Guide</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <span class="footer-copy">© 2026 Hobbyist Laser Calc</span>
+  <div class="footer-links">
+    <a href="/">Calculator</a>
+    <a href="blog.html">Blog</a>
+    <a href="about.html">About</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="https://github.com/SMSNYDER81/hobbyistlasercalc.com/issues" target="_blank" rel="noopener">Feedback</a>
+  </div>
+</footer>
+<script src="/feedback.js" data-repo="SMSNYDER81/hobbyistlasercalc.com"></script>
+</body>
+</html>
